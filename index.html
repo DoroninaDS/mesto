@@ -4,9 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./style.css"> <!-- DELITE -->
     <link rel="stylesheet" href="./pages/index.css">
-    <title>Mesto.Russia</title>
+    <title>Место.Россия</title>
 </head>
 
 <body class="page">
@@ -27,37 +26,37 @@
 
         <section class="elements">
                 <article class="element">
-                    <img class="element__image" src="./images/ivanovo.jpg" alt="">
+                    <img class="element__image" src="./images/ivanovo.jpg" alt="Лес - вид сверху.">
                     <h2 class="element__title">Иваново</h2>
                     <button class="element__button" type="button"></button>
                 </article>
 
                 <article class="element">
-                    <img class="element__image" src="./images/Sochi.jpg" alt="">
+                    <img class="element__image" src="./images/Sochi.jpg" alt="Горы.">
                     <h2 class="element__title">Сочи</h2>
                     <button class="element__button" type="button"></button>
                 </article>
 
                 <article class="element">
-                    <img class="element__image" src="./images/Saint Petersburg.jpg" alt="">
+                    <img class="element__image" src="./images/Saint-Petersburg.jpg" alt="Казанский собор.">
                     <h2 class="element__title">Санкт-Петербург</h2>
                     <button class="element__button" type="button"></button>
                 </article>
 
                 <article class="element">
-                    <img class="element__image" src="./images/krasnoyarsk-krai.jpg" alt="">
+                    <img class="element__image" src="./images/krasnoyarsk-krai.jpg" alt="Природный парк Ергаки.">
                     <h2 class="element__title">Красноярский край</h2>
                     <button class="element__button" type="button"></button>
                 </article>
 
                 <article class="element">
-                    <img class="element__image" src="./images/Primorsky-Krai.jpg" alt="">
+                    <img class="element__image" src="./images/Primorsky-Krai.jpg" alt="Бухта 'Витязь'.">
                     <h2 class="element__title">Приморский край</h2>
                     <button class="element__button" type="button"></button>
                 </article>
 
                 <article class="element">
-                    <img class="element__image" src="./images/Pervushino.jpg" alt="">
+                    <img class="element__image" src="./images/Pervushino.jpg" alt="Туман над речкой.">
                     <h2 class="element__title">Первушино</h2>
                     <button class="element__button" type="button"></button>
                 </article>
@@ -65,11 +64,23 @@
     </main>
 
     <footer class="footer">
-
+        <p class="footer__copyright">&copy; 2022 Mesto Russia</p>
     </footer>
 
-    <section class="popup"></section>
+    <section class="popup">
+        <div class="popup__container">
+            <button class="popup__close-button" type="button"></button>
+            <h2 class="popup__title">Редактировать профиль</h2>
+            <form class="popup__form">
+                <fieldset class="popup__form_info">
+                    <input class="popup__form_input popup__form_input_type_name" type="text">
+                    <input class="popup__form_input popup__form_input_type_about-me" type="text">
+                </fieldset>
+                <button class="popup__form_save-button" type="submit">Сохранить</button>
+            </form>
+        </div>
+    </section>
 
-<script src="./script.js"></script>    
+<script src="./scrirt.js/index.js"></script>    
 </body>
 </html>

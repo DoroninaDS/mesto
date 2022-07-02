@@ -1,0 +1,31 @@
+.popup__form_input {
+    font-family: inherit;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.2;
+    color: #000000;
+    border: none;
+    border-bottom: 1px solid #cccccc;
+    width: 358px;
+    height: 27px;
+    box-sizing: border-box;
+    margin-bottom: 30px;
+    padding-bottom: 13px;
+
+}
+
+.popup__form_input:last-child {
+    margin-bottom: 0;
+}
+
+.popup__form_input:focus {
+    outline: none;
+    border-bottom: 1px solid #cccccc;
+}
+
+@media screen and (max-width: 770px) {
+    .popup__form_input {
+        width: 238px;
+    }
+}
