@@ -1,4 +1,4 @@
-.popup__form_input {
+.form__input {
     font-family: inherit;
     font-style: normal;
     font-weight: 400;
@@ -15,17 +15,17 @@
 
 }
 
-.popup__form_input:last-child {
+.form__input:last-child {
     margin-bottom: 0;
 }
 
-.popup__form_input:focus {
+.form__input:focus {
     outline: none;
     border-bottom: 1px solid #cccccc;
 }
 
 @media screen and (max-width: 770px) {
-    .popup__form_input {
+    .form__input {
         width: 238px;
     }
 }
