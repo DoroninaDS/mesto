@@ -8,13 +8,13 @@ let nameInput = formElement.querySelector('.form__input_type_name');
 let aboutMeInput = formElement.querySelector('.form__input_type_about-me');
 
 const openPopup = function() {
-  popupElement.classList.add('popup__open');
+  popupElement.classList.add('popup_opened');
   nameInput.value = infoTitleElement.textContent;
   aboutMeInput.value = infoSubtitleElement.textContent;
 }
   
 const closePopup = function() {
-  popupElement.classList.remove('popup__open');
+  popupElement.classList.remove('popup_opened');
 }
 
 function formSubmitHandler (evt) {
