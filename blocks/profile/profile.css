@@ -5,7 +5,7 @@
     grid-template-columns: 120px 336px 1fr;
     align-items: center;
     grid-template-areas: 
-    "avatar info button" ;
+    "avatar info button";
 }
 
 @media screen and (max-width: 770px) {
@@ -14,7 +14,7 @@
         grid-template-areas: 
         "avatar"
         "info"
-        "button" ;
+        "button";
         justify-items: center;
     }
 }
