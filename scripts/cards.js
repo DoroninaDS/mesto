@@ -1,7 +1,7 @@
 const initialCards = [
   {
-    name: 'Иваново',
-    link: 'https://goo.su/Y4ivO'
+    name: 'Первушино',
+    link: 'https://goo.su/SjIpXZJ'
   },
   {
     name: 'Сочи',
@@ -20,7 +20,7 @@ const initialCards = [
     link: 'https://goo.su/jNszhSk'
   },
   {
-    name: 'Первушино',
-    link: 'https://goo.su/SjIpXZJ'
+    name: 'Иваново',
+    link: 'https://goo.su/Y4ivO'
   }
 ];
