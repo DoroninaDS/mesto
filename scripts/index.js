@@ -97,15 +97,15 @@ popupAddOpenButton.addEventListener('click', function () {
   openPopup(popupAdd);
 });
 
-popupEditCloseButton.addEventListener('click', function (){
+popupEditCloseButton.addEventListener('click', function () {
   closePopup(popupEdit);
 });
 
-popupAddCloseButton.addEventListener('click', function (){
+popupAddCloseButton.addEventListener('click', function () {
   closePopup(popupAdd);
 });
 
-popupFullCloseButton.addEventListener('click', function (){
+popupFullCloseButton.addEventListener('click', function () {
   closePopup(popupFull);
 });
 
