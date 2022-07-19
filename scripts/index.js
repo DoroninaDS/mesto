@@ -23,7 +23,7 @@ const linkInput = formAdd.querySelector('.form__input_type_link');
 const imageFull = document.querySelector('.figure__image');
 const titleFull = document.querySelector('.figure__title');
 
-const allCards = document.querySelector('.elements');
+const cardsConteiner= document.querySelector('.elements');
 const templateElement = document.querySelector('#element-template').content;
 
 const openPopup = function(popup) {
@@ -53,12 +53,13 @@ function createCard(name, link){
 
 function addCard(name, link) {
   const elementCard = createCard(name, link);
-  allCards.prepend(elementCard);
+  cardsConteiner.prepend(elementCard);
 };
 
 function openPopupFull(evt) {
   openPopup(popupFull);
   imageFull.src = evt.target.src;
+  imageFull.alt = evt.target.alt;
   titleFull.textContent = evt.target.alt;
 };
 
@@ -84,6 +85,8 @@ function formEditSubmitHandler(evt) {
 function formAddSubmitHandler(evt) {
   evt.preventDefault();
   addCard (namedInput.value, linkInput.value);
+  namedInput.value = '';
+  linkInput.value = '';
   closePopup(popupAdd);
 };
 
