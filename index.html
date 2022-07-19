@@ -25,53 +25,19 @@
         </section>
 
         <section class="elements">
-                <article class="element">
-                    <img class="element__image" src="./images/ivanovo.jpg" alt="Лес - вид сверху.">
-                    <h2 class="element__title">Иваново</h2>
-                    <button class="element__button" type="button"></button>
-                </article>
-
-                <article class="element">
-                    <img class="element__image" src="./images/Sochi.jpg" alt="Горы.">
-                    <h2 class="element__title">Сочи</h2>
-                    <button class="element__button" type="button"></button>
-                </article>
-
-                <article class="element">
-                    <img class="element__image" src="./images/Saint-Petersburg.jpg" alt="Казанский собор.">
-                    <h2 class="element__title">Санкт-Петербург</h2>
-                    <button class="element__button" type="button"></button>
-                </article>
-
-                <article class="element">
-                    <img class="element__image" src="./images/krasnoyarsk-krai.jpg" alt="Природный парк Ергаки.">
-                    <h2 class="element__title">Красноярский край</h2>
-                    <button class="element__button" type="button"></button>
-                </article>
-
-                <article class="element">
-                    <img class="element__image" src="./images/Primorsky-Krai.jpg" alt="Бухта 'Витязь'.">
-                    <h2 class="element__title">Приморский край</h2>
-                    <button class="element__button" type="button"></button>
-                </article>
-
-                <article class="element">
-                    <img class="element__image" src="./images/Pervushino.jpg" alt="Туман над речкой.">
-                    <h2 class="element__title">Первушино</h2>
-                    <button class="element__button" type="button"></button>
-                </article>
         </section>
+        
     </main>
 
     <footer class="footer">
         <p class="footer__copyright">&copy; 2022 Mesto Russia</p>
     </footer>
 
-    <div class="popup">
+    <div class="popup popup_edit">
         <div class="popup__container">
-            <button class="popup__close-button" type="button"></button>
+            <button class="popup__close-button popup__close-edit" type="button"></button>
             <h2 class="popup__title">Редактировать профиль</h2>
-            <form class="form">
+            <form class="form form_edit">
                 <fieldset class="form__info">
                     <input class="form__input form__input_type_name" type="text">
                     <input class="form__input form__input_type_about-me" type="text">
@@ -81,6 +47,40 @@
         </div>
     </div>
 
-<script src="./scripts/index.js"></script>    
+    <div class="popup popup_add">
+        <div class="popup__container">
+            <button class="popup__close-button popup__close-add" type="button"></button>
+            <h2 class="popup__title">Новое место</h2>
+            <form class="form form_add">
+                <fieldset class="form__info">
+                    <input class="form__input form__input_type_named" type="text" placeholder="Название" required>
+                    <input class="form__input form__input_type_link" type="url" placeholder="Ссылка на картинку" required>
+                </fieldset>
+                <button class="form__save-button" type="submit">Создать</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="popup popup_full">
+        <div class="popup__container-full">
+            <button class="popup__close-button popup__close-full" type="button"></button>
+            <figure class="figure">
+                <img class="figure__image" src="#" alt="#">
+                <figcaption class="figure__title"></figcaption>
+            </figure>
+        </div>
+    </div>
+
+    <template id="element-template">
+        <article class="element">
+            <button class="element__delete" type="button"></button>
+            <img class="element__image" src="#" alt="#">
+            <h2 class="element__title"></h2>
+            <button class="element__like" type="button"></button>
+        </article>
+    </template>
+
+<script src="./scripts/cards.js"></script>
+<script src="./scripts/index.js"></script>
 </body>
 </html>

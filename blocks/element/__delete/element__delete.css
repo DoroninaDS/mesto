@@ -1,17 +1,17 @@
-.element__button {
-    background-image: url(../../../images/like.svg);
-    min-width: 22px;
+.element__delete {
+    background-image: url(../../../images/trash.svg);
+    min-width: 18px;
     min-height: 19px;
     background-repeat: no-repeat;
     background-position: center;
     background-color: transparent;
     position: absolute;
-    bottom: 30px;
+    top: 20px;
     right: 20px;
     border: none;
 }
 
-.element__button:hover {
+.element__delete:hover {
     cursor: pointer;
     opacity: 0.6;
 }
