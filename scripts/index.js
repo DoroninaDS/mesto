@@ -28,10 +28,26 @@ const templateElement = document.querySelector('#element-template').content;
 
 const openPopup = function(popup) {
   popup.classList.add('popup_opened');
+
+  document.addEventListener('keydown', closePopupEsc);
 };
   
 const closePopup = function(popup) {
   popup.classList.remove('popup_opened');
+
+  document.removeEventListener('keydown', closePopupEsc);
+};
+
+function closePopupEsc(evt){
+  if (evt.key === 'Escape' && popupEdit.classList.contains('popup_opened')) {
+    closePopup(popupEdit)
+  };
+  if (evt.key === 'Escape' && popupAdd.classList.contains('popup_opened')) {
+    closePopup(popupAdd)
+  };
+  if (evt.key === 'Escape' && popupFull.classList.contains('popup_opened')) {
+    closePopup(popupFull)
+  };
 };
 
 function createCard(name, link){
@@ -90,14 +106,25 @@ function formAddSubmitHandler(evt) {
   closePopup(popupAdd);
 };
 
+function clearError () {
+  const inputList = Array.from(document.querySelectorAll('.form__input'));
+  inputList.forEach((input) => {
+    const span = input.nextElementSibling;
+    span.textContent = '';
+  }) 
+}
+
+// Listeners
 popupEditOpenButton.addEventListener('click', function () {
   openPopup(popupEdit);
   nameInput.value = infoTitleElement.textContent;
   aboutMeInput.value = infoSubtitleElement.textContent;
+  clearError (); 
 });
 
 popupAddOpenButton.addEventListener('click', function () {
   openPopup(popupAdd);
+  clearError ();
 });
 
 popupEditCloseButton.addEventListener('click', function () {
@@ -110,6 +137,24 @@ popupAddCloseButton.addEventListener('click', function () {
 
 popupFullCloseButton.addEventListener('click', function () {
   closePopup(popupFull);
+});
+
+popupEdit.addEventListener('click', function (evt) {
+  if (evt.target === evt.currentTarget) {
+    closePopup(popupEdit);
+  };
+});
+
+popupAdd.addEventListener('click', function (evt) {
+  if (evt.target === evt.currentTarget) {
+    closePopup(popupAdd);
+  };
+});
+
+popupFull.addEventListener('click', function (evt) {
+  if (evt.target === evt.currentTarget) {
+    closePopup(popupFull);
+  };
 });
 
 formEdit.addEventListener('submit', formEditSubmitHandler);

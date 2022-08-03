@@ -1,0 +1,11 @@
+.form__save-button_inactive {
+    background-color: #E5E5E5;
+    color: #CCC;
+    border: 1px solid #CCC;
+    border-radius: 2px;
+}
+
+.form__save-button_inactive:hover {
+    cursor: default;
+    background-color: #E5E5E5;
+}
