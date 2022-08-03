@@ -10,8 +10,12 @@
     width: 358px;
     height: 27px;
     box-sizing: border-box;
-    margin-bottom: 30px;
+    margin-bottom: 35px;
     padding-bottom: 13px;
+}
+
+.form__input:last-child {
+    margin-bottom: 0;
 }
 
 .form__input:focus {
