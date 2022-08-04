@@ -100,7 +100,7 @@ function formEditSubmitHandler(evt) {
   infoSubtitleElement.textContent = aboutMeInput.value;
   closePopup(popupEdit);
 
-  disableButton(inputEditSaveButton);
+  
 };
 
 function formAddSubmitHandler(evt) {
@@ -109,8 +109,6 @@ function formAddSubmitHandler(evt) {
   namedInput.value = '';
   linkInput.value = '';
   closePopup(popupAdd);
-  
-  disableButton(inputAddSaveButton);
 };
 
 function clearError () {
@@ -127,11 +125,13 @@ popupEditOpenButton.addEventListener('click', function () {
   nameInput.value = infoTitleElement.textContent;
   aboutMeInput.value = infoSubtitleElement.textContent;
   clearError (); 
+  disableButton(inputEditSaveButton);
 });
 
 popupAddOpenButton.addEventListener('click', function () {
   openPopup(popupAdd);
   clearError ();
+  disableButton(inputAddSaveButton);
 });
 
 popupEditCloseButton.addEventListener('click', function () {
