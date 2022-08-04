@@ -26,6 +26,9 @@ const titleFull = document.querySelector('.figure__title');
 const cardsConteiner= document.querySelector('.elements');
 const templateElement = document.querySelector('#element-template').content;
 
+const inputEditSaveButton = document.querySelector('.form__save-button_edit');
+const inputAddSaveButton = document.querySelector('.form__save-button_add');
+
 const openPopup = function(popup) {
   popup.classList.add('popup_opened');
 
@@ -96,6 +99,8 @@ function formEditSubmitHandler(evt) {
   infoTitleElement.textContent = nameInput.value;
   infoSubtitleElement.textContent = aboutMeInput.value;
   closePopup(popupEdit);
+
+  disableButton(inputEditSaveButton);
 };
 
 function formAddSubmitHandler(evt) {
@@ -104,6 +109,8 @@ function formAddSubmitHandler(evt) {
   namedInput.value = '';
   linkInput.value = '';
   closePopup(popupAdd);
+  
+  disableButton(inputAddSaveButton);
 };
 
 function clearError () {

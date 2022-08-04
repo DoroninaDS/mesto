@@ -69,5 +69,9 @@ const enableValidation = (config) => {
     });
 };
 
+function disableButton(buttonElement) {
+    buttonElement.classList.add(selectorsObj.inactiveButtonClass);
+    buttonElement.setAttribute('disabled', true);
+};
 
 enableValidation(selectorsObj);
