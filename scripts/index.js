@@ -42,14 +42,9 @@ const closePopup = function(popup) {
 };
 
 function closePopupEsc(evt){
-  if (evt.key === 'Escape' && popupEdit.classList.contains('popup_opened')) {
-    closePopup(popupEdit)
-  };
-  if (evt.key === 'Escape' && popupAdd.classList.contains('popup_opened')) {
-    closePopup(popupAdd)
-  };
-  if (evt.key === 'Escape' && popupFull.classList.contains('popup_opened')) {
-    closePopup(popupFull)
+  if (evt.key === 'Escape') {
+    const opendPopup = document.querySelector('.popup_opened');
+    closePopup(opendPopup);
   };
 };
 
@@ -94,20 +89,17 @@ initialCards.forEach(function(initialCards){
   addCard(initialCards.name, initialCards.link);
 });
 
-function formEditSubmitHandler(evt) {
+function handleFormEditSubmit(evt) {
   evt.preventDefault();
   infoTitleElement.textContent = nameInput.value;
   infoSubtitleElement.textContent = aboutMeInput.value;
   closePopup(popupEdit);
-
-  
 };
 
-function formAddSubmitHandler(evt) {
+function handleFormAddSubmit(evt) {
   evt.preventDefault();
   addCard (namedInput.value, linkInput.value);
-  namedInput.value = '';
-  linkInput.value = '';
+  evt.target.reset();
   closePopup(popupAdd);
 };
 
@@ -146,23 +138,23 @@ popupFullCloseButton.addEventListener('click', function () {
   closePopup(popupFull);
 });
 
-popupEdit.addEventListener('click', function (evt) {
+popupEdit.addEventListener('mousedown', function (evt) {
   if (evt.target === evt.currentTarget) {
     closePopup(popupEdit);
   };
 });
 
-popupAdd.addEventListener('click', function (evt) {
+popupAdd.addEventListener('mousedown', function (evt) {
   if (evt.target === evt.currentTarget) {
     closePopup(popupAdd);
   };
 });
 
-popupFull.addEventListener('click', function (evt) {
+popupFull.addEventListener('mousedown', function (evt) {
   if (evt.target === evt.currentTarget) {
     closePopup(popupFull);
   };
 });
 
-formEdit.addEventListener('submit', formEditSubmitHandler);
-formAdd.addEventListener('submit', formAddSubmitHandler);
+formEdit.addEventListener('submit', handleFormEditSubmit);
+formAdd.addEventListener('submit', handleFormAddSubmit);
