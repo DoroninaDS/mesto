@@ -29,12 +29,18 @@ export class Card {
     });
 
     this._likeButton.addEventListener('click', () => {
-      this._likeButton.classList.toggle(this._cardSelectors.likeActive);
+      this._likeCard();
     });
-
     this._deleteButton.addEventListener('click', () => {
-      this._card.closest(this._cardSelectors.cardElement).remove();
+      this._deleteCard();
     });
   }
   
+  _likeCard() {
+    this._likeButton.classList.toggle(this._cardSelectors.likeActive);
+  };
+
+  _deleteCard(){
+    this._card.remove();
+  };
 };

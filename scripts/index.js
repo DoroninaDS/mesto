@@ -3,7 +3,7 @@ import {initialCards, formObj, cardObj, popups,
   popupAddOpenButton, formEdit, nameInput, aboutMeInput, 
   infoTitleElement, infoSubtitleElement, formAdd, namedInput, 
   linkInput, imageFull, titleFull, cardsConteiner, inputEditSaveButton, 
-  inputAddSaveButton} from './constants.js';
+  inputAddSaveButton} from '../utils/constants.js';
 import { Card } from './Card.js';
 import { FormValidator } from './FormValidator.js';
 
@@ -63,11 +63,6 @@ function handleCardClick (link, name) {
   openPopup(popupFull);
 }
 
-function disableButton(buttonElement) {
-  buttonElement.classList.add('form__save-button_inactive');
-  buttonElement.setAttribute('disabled', true);
-};
-
 popupEditValidation.enableValidation();
 popupAddValidation.enableValidation();
 
@@ -77,14 +72,12 @@ popupEditOpenButton.addEventListener('click', () => {
   openPopup(popupEdit);
   nameInput.value = infoTitleElement.textContent;
   aboutMeInput.value = infoSubtitleElement.textContent;
-  disableButton(inputEditSaveButton);
 });
 
 popupAddOpenButton.addEventListener('click', () => {
   popupAddValidation.resetValidation();
   openPopup(popupAdd);
   formAdd.reset();
-  disableButton(inputAddSaveButton);
 });
 
 popups.forEach((popup) => {
