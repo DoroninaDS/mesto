@@ -7,6 +7,9 @@ import {initialCards, formObj, cardObj, popups,
 import { Card } from './Card.js';
 import { FormValidator } from './FormValidator.js';
 
+const popupEditValidation = new FormValidator (formObj, popupEdit);
+const popupAddValidation = new FormValidator (formObj, popupAdd);
+
 const openPopup = function(popup) {
   popup.classList.add('popup_opened');
 
@@ -64,9 +67,6 @@ function disableButton(buttonElement) {
   buttonElement.classList.add('form__save-button_inactive');
   buttonElement.setAttribute('disabled', true);
 };
-
-const popupEditValidation = new FormValidator (formObj, popupEdit);
-const popupAddValidation = new FormValidator (formObj, popupAdd);
 
 popupEditValidation.enableValidation();
 popupAddValidation.enableValidation();

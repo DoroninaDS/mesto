@@ -43,7 +43,6 @@ export class FormValidator {
         }
     };
 
-
     _setEventListeners () {
         this._inputList = Array.from(this._formElement.querySelectorAll(this._formSelectors.inputSelector));
         this._toggleButtonState();
