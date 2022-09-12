@@ -1,4 +1,4 @@
-/*import './index.css';*/
+import './index.css';
 import {initialCards, formObj, cardObj, popupEdit, popupAdd, popupFull, popupEditOpenButton,
 popupAddOpenButton, nameInput, aboutMeInput, cardsConteiner} from '../utils/constants.js';
 import Card from '../components/Card.js';
