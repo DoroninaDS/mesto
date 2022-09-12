@@ -46,7 +46,6 @@ const cardObj = {
     likeActive: 'element__like_active'
 };
 
-const popups = document.querySelectorAll('.popup'); 
 const popupEdit = document.querySelector('.popup_edit');
 const popupAdd = document.querySelector('.popup_add');
 const popupFull = document.querySelector('.popup_full');
@@ -61,16 +60,13 @@ const aboutMeInput = formEdit.querySelector('.form__input_type_about-me');
 const infoTitleElement = document.querySelector('.profile__info-title');
 const infoSubtitleElement = document.querySelector('.profile__info-subtitle');
 
-const formAdd = document.querySelector(formObj.formAdd); // +
+const formAdd = document.querySelector(formObj.formAdd);
 const namedInput = formAdd.querySelector('.form__input_type_named');
 const linkInput = formAdd.querySelector('.form__input_type_link');
 
-const imageFull = document.querySelector('.figure__image');
-const titleFull = document.querySelector('.figure__title');
-
 const cardsConteiner= document.querySelector('.elements');
 
-const inputEditSaveButton = document.querySelector('.form__save-button_edit');
-const inputAddSaveButton = document.querySelector('.form__save-button_add');
-
-export {initialCards, formObj, cardObj, popups, popupEdit, popupAdd, popupFull, popupEditOpenButton, popupAddOpenButton, formEdit, nameInput, aboutMeInput, infoTitleElement, infoSubtitleElement, formAdd, namedInput, linkInput, imageFull, titleFull, cardsConteiner, inputEditSaveButton, inputAddSaveButton};
+export {initialCards, formObj, cardObj, 
+  popupEdit, popupAdd, popupFull, popupEditOpenButton, 
+  popupAddOpenButton, nameInput, aboutMeInput, namedInput, linkInput,
+  infoTitleElement, infoSubtitleElement, cardsConteiner};

@@ -1,0 +1,19 @@
+{
+  "name": "yandex.praktikum",
+  "version": "0.0.1",
+  "description": "Проект \"Mesto\" - это социальная сеть, в которой можно создать свой профиль и делиться фотографиями из разных уголков России.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DoroninaDS/mesto.git"
+  },
+  "author": "Daria Doronina",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DoroninaDS/mesto/issues"
+  },
+  "homepage": "https://github.com/DoroninaDS/mesto#readme"
+}
