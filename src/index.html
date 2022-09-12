@@ -39,11 +39,11 @@
             <h2 class="popup__title">Редактировать профиль</h2>
             <form class="form form_edit" name="form-edit" novalidate>
                 <label class="form__info">
-                    <input id="name_input" class="form__input form__input_type_name" name="nameInput" type="text" minlength="2" maxlength="40" required>
+                    <input name="nameInput" id="name_input" class="form__input form__input_type_name" type="text" minlength="2" maxlength="40" required>
                     <span id="name_input-error" class="form__input-error"></span>
                 </label>
                 <label class="form__info">
-                    <input id="about-me_input" class="form__input form__input_type_about-me" name="aboutMeInput" type="text" minlength="2" maxlength="200" required>
+                    <input name="aboutMeInput" id="about-me_input" class="form__input form__input_type_about-me" type="text" minlength="2" maxlength="200" required>
                     <span id="about-me_input-error" class="form__input-error"></span>
                 </label>
                 <button class="form__save-button form__save-button_edit" type="submit">Сохранить</button>
@@ -57,11 +57,11 @@
             <h2 class="popup__title">Новое место</h2>
             <form class="form form_add" name="form-add" novalidate>
                 <label class="form__info">
-                    <input id="named_input" class="form__input form__input_type_named" name="namedInput" type="text" placeholder="Название" minlength="2" maxlength="30" required>
+                    <input name="namedInput" id="named_input" class="form__input form__input_type_named" type="text" placeholder="Название" minlength="2" maxlength="30" required>
                     <span id="named_input-error" class="form__input-error"></span>
                 </label>
                 <label class="form__info">
-                    <input id="link_input" class="form__input form__input_type_link" name="linkInput" type="url" placeholder="Ссылка на картинку" required>
+                    <input name="linkInput" id="link_input" class="form__input form__input_type_link" type="url" placeholder="Ссылка на картинку" required>
                     <span id="link_input-error" class="form__input-error"></span>
                 </label>
                 <button class="form__save-button form__save-button_add" type="submit">Создать</button>

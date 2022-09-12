@@ -1,6 +1,5 @@
 /*import './index.css';*/
-import {initialCards, formObj, cardObj, 
-  popupEdit, popupAdd, popupFull, popupEditOpenButton, 
+import {initialCards, formObj, cardObj, popupEdit, popupAdd, popupFull, popupEditOpenButton, 
   popupAddOpenButton, nameInput, aboutMeInput, cardsConteiner} from '../utils/constants.js';
 import Card from '../components/Card.js';
 import FormValidator from '../components/FormValidator.js';
@@ -56,8 +55,8 @@ const addPopup = new PopupWithForm({
 })
 
 const popupEditValidation = new FormValidator (formObj, popupEdit);
-const popupAddValidation = new FormValidator (formObj, popupAdd);
 popupEditValidation.enableValidation();
+const popupAddValidation = new FormValidator (formObj, popupAdd);
 popupAddValidation.enableValidation();
 
 addCard.renderItems();

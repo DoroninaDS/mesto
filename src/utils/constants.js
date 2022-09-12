@@ -62,6 +62,4 @@ const nameInput = document.querySelector('.form__input_type_name');
 const aboutMeInput = document.querySelector('.form__input_type_about-me');
 const cardsConteiner= document.querySelector('.elements');
 
-export {initialCards, formObj, cardObj, 
-  popupEdit, popupAdd, popupFull, popupEditOpenButton, 
-  popupAddOpenButton, nameInput, aboutMeInput, cardsConteiner};
+export {initialCards, formObj, cardObj, popupEdit, popupAdd, popupFull, popupEditOpenButton, popupAddOpenButton, nameInput, aboutMeInput, cardsConteiner};
