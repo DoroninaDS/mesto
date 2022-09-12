@@ -1,27 +1,34 @@
+const imageSochi = new URL('../images/Sochi.jpg', import.meta.url);
+const imageKrasnoyarsk = new URL('../images/krasnoyarsk-krai.jpg', import.meta.url);
+const imageIvanovo = new URL('../images/ivanovo.jpg', import.meta.url);
+const imagePervushino = new URL('../images/Pervushino.jpg', import.meta.url);
+const imagePrimorsk = new URL('../images/Primorsky-Krai.jpg', import.meta.url);
+const imageSPb = new URL('../images/Saint-Petersburg.jpg', import.meta.url);
+
 const initialCards = [
     {
       name: 'Сочи',
-      link: './images/Sochi.jpg'
+      link: imageSochi
     },
     {
       name: 'Красноярский край',
-      link: './images/krasnoyarsk-krai.jpg'
+      link: imageKrasnoyarsk
     },
     {
       name: 'Иваново',
-      link: './images/ivanovo.jpg'
+      link: imageIvanovo
     },
     {
       name: 'Первушино',
-      link: './images/Pervushino.jpg'
+      link: imagePervushino
     },
     {
       name: 'Приморский край',
-      link: './images/Primorsky-Krai.jpg'
+      link: imagePrimorsk
     },
     {
       name: 'Санкт-Петербург',
-      link: './images/Saint-Petersburg.jpg'
+      link: imageSPb
     }
 ];
 
@@ -49,24 +56,12 @@ const cardObj = {
 const popupEdit = document.querySelector('.popup_edit');
 const popupAdd = document.querySelector('.popup_add');
 const popupFull = document.querySelector('.popup_full');
-
 const popupEditOpenButton = document.querySelector('.profile__info-edit-button');
 const popupAddOpenButton = document.querySelector('.profile__add-button');
-
-const formEdit = document.querySelector(formObj.formEdit);
-const nameInput = formEdit.querySelector('.form__input_type_name');
-const aboutMeInput = formEdit.querySelector('.form__input_type_about-me');
-
-const infoTitleElement = document.querySelector('.profile__info-title');
-const infoSubtitleElement = document.querySelector('.profile__info-subtitle');
-
-const formAdd = document.querySelector(formObj.formAdd);
-const namedInput = formAdd.querySelector('.form__input_type_named');
-const linkInput = formAdd.querySelector('.form__input_type_link');
-
+const nameInput = document.querySelector('.form__input_type_name');
+const aboutMeInput = document.querySelector('.form__input_type_about-me');
 const cardsConteiner= document.querySelector('.elements');
 
 export {initialCards, formObj, cardObj, 
   popupEdit, popupAdd, popupFull, popupEditOpenButton, 
-  popupAddOpenButton, nameInput, aboutMeInput, namedInput, linkInput,
-  infoTitleElement, infoSubtitleElement, cardsConteiner};
+  popupAddOpenButton, nameInput, aboutMeInput, cardsConteiner};

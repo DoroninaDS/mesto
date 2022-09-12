@@ -1,17 +1,13 @@
-
+/*import './index.css';*/
 import {initialCards, formObj, cardObj, 
   popupEdit, popupAdd, popupFull, popupEditOpenButton, 
-  popupAddOpenButton, nameInput, aboutMeInput, namedInput, linkInput,
-  infoTitleElement, infoSubtitleElement, cardsConteiner} from '../utils/constants.js';
+  popupAddOpenButton, nameInput, aboutMeInput, cardsConteiner} from '../utils/constants.js';
 import Card from '../components/Card.js';
 import FormValidator from '../components/FormValidator.js';
 import Section from '../components/Section.js';
 import PopupWithImage from '../components/PopupWithImage.js';
 import PopupWithForm from '../components/PopupWithForm.js';
 import UserInfo from '../components/UserInfo.js';
-
-const popupEditValidation = new FormValidator (formObj, popupEdit);
-const popupAddValidation = new FormValidator (formObj, popupAdd);
 
 const fullImage = new PopupWithImage(popupFull);
 
@@ -59,6 +55,8 @@ const addPopup = new PopupWithForm({
   }
 })
 
+const popupEditValidation = new FormValidator (formObj, popupEdit);
+const popupAddValidation = new FormValidator (formObj, popupAdd);
 popupEditValidation.enableValidation();
 popupAddValidation.enableValidation();
 
