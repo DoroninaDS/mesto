@@ -42,7 +42,6 @@ const formObj = {
     inputErrorClass: 'form__input_type_error',
     errorClass: 'form__input-error_active'
 };
-
 const cardObj = {
     templateElement: '#element-template',
     cardElement: '.element',
@@ -52,7 +51,6 @@ const cardObj = {
     deleteButton: '.element__delete',
     likeActive: 'element__like_active'
 };
-
 const popupEdit = document.querySelector('.popup_edit');
 const popupAdd = document.querySelector('.popup_add');
 const popupFull = document.querySelector('.popup_full');

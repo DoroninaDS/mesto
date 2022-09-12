@@ -19,14 +19,13 @@ export default class Card {
     this._imageElement.alt = this._name;
     this._textElement.textContent = this._name;
     this._setEventListeners();
-
     return this._card;
   }
 
   _setEventListeners() {
     this._imageElement.addEventListener('click', () => {
       this._handleCardClick({
-        name: this._name, 
+        name: this._name,
         link: this._link
       });
     });

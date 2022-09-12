@@ -1,6 +1,6 @@
 /*import './index.css';*/
-import {initialCards, formObj, cardObj, popupEdit, popupAdd, popupFull, popupEditOpenButton, 
-  popupAddOpenButton, nameInput, aboutMeInput, cardsConteiner} from '../utils/constants.js';
+import {initialCards, formObj, cardObj, popupEdit, popupAdd, popupFull, popupEditOpenButton,
+popupAddOpenButton, nameInput, aboutMeInput, cardsConteiner} from '../utils/constants.js';
 import Card from '../components/Card.js';
 import FormValidator from '../components/FormValidator.js';
 import Section from '../components/Section.js';
@@ -11,7 +11,7 @@ import UserInfo from '../components/UserInfo.js';
 const fullImage = new PopupWithImage(popupFull);
 
 function createCard(data){
-  const card = new Card (data, cardObj,{
+  const card = new Card (data, cardObj, {
     handleCardClick: (data) => {
       fullImage.open(data)
     }
@@ -28,12 +28,12 @@ const addCard = new Section({
 }, cardsConteiner);
 
 const userInfo = new UserInfo ({
-  nameSelector: '.profile__info-title', 
+  nameSelector: '.profile__info-title',
   aboutMeSelector: '.profile__info-subtitle'
 });
 
 const userPopup = new PopupWithForm({
-  popupSelector: popupEdit, 
+  popupSelector: popupEdit,
   handleFormSubmit: (data) => {
     userInfo.setUserInfo({
       name: data.nameInput,
@@ -44,12 +44,12 @@ const userPopup = new PopupWithForm({
 })
 
 const addPopup = new PopupWithForm({
-  popupSelector: popupAdd, 
+  popupSelector: popupAdd,
   handleFormSubmit: (data) => {
     addCard.addItem(createCard({
-      name: data.namedInput, 
+      name: data.namedInput,
       link: data.linkInput
-    }))
+    }));
     addPopup.close();
   }
 })
@@ -66,17 +66,13 @@ addPopup.setEventListeners();
 
 popupEditOpenButton.addEventListener('click', () => {
   popupEditValidation.resetValidation();
-
   const userData = userInfo.getUserInfo();
-  
   nameInput.value = userData.name;
   aboutMeInput.value = userData.aboutMe;
-
   userPopup.open();
 });
 
 popupAddOpenButton.addEventListener('click', () => {
   popupAddValidation.resetValidation();
-
   addPopup.open();
 });

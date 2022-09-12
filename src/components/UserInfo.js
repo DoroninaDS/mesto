@@ -8,7 +8,7 @@ export default class UserInfo {
         const userData = {
             name: this._nameElemment.textContent,
             aboutMe: this._aboutMeElemment.textContent
-        };
+        }
         return userData;
     }
 
