@@ -29,7 +29,7 @@ const popupEditOpenButton = document.querySelector('.profile__info-edit-button')
 const popupAddOpenButton = document.querySelector('.profile__add-button');
 const editAvatarButton = document.querySelector('.profile__edit-avatar-button');
 const nameInput = document.querySelector('.form__input_type_name');
-const aboutMeInput = document.querySelector('.form__input_type_about_me');
+const aboutMeInput = document.querySelector('.form__input_type_about-me');
 const cardsConteiner= document.querySelector('.elements');
 
 export {formObj, cardObj, popupEdit, popupAdd, popupAvatar, popupDelete, popupFull, popupEditOpenButton, popupAddOpenButton, editAvatarButton, nameInput, aboutMeInput, cardsConteiner};
