@@ -8,14 +8,9 @@
     border: none;
     border-bottom: 1px solid #ccc;
     width: 358px;
-    height: 27px;
     box-sizing: border-box;
     margin-bottom: 35px;
-    padding-bottom: 13px;
-}
-
-.form__input:last-child {
-    margin-bottom: 0;
+    padding: 6px;
 }
 
 .form__input:focus {

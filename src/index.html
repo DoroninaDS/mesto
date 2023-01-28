@@ -14,10 +14,11 @@
 
     <main class="content">
         <section class="profile">
-            <img class="profile__avatar" src="<%=require('./images/jack-ive-cousto.jpg')%>" alt="Жак-Ив Кусто.">
+            <img class="profile__avatar" src="#" alt="Аватар пользователя">
+            <button class="profile__edit-avatar-button"></button>
             <div class="profile__info">
-                <h1 class="profile__info-title">Жак-Ив Кусто</h1>
-                <p class="profile__info-subtitle">Исследователь океана</p>
+                <h1 class="profile__info-title"></h1>
+                <p class="profile__info-subtitle"></p>
                 <button class="profile__info-edit-button" type="button"></button>
             </div>
             <button class="profile__add-button" type="button"></button>
@@ -42,7 +43,7 @@
                     <span id="name_input-error" class="form__input-error"></span>
                 </label>
                 <label class="form__info">
-                    <input name="aboutMeInput" id="about-me_input" class="form__input form__input_type_about-me" type="text" minlength="2" maxlength="200" required>
+                    <input name="aboutMeInput" id="about-me_input" class="form__input form__input_type_about_me" type="text" minlength="2" maxlength="200" required>
                     <span id="about-me_input-error" class="form__input-error"></span>
                 </label>
                 <button class="form__save-button form__save-button_edit" type="submit">Сохранить</button>
@@ -68,11 +69,35 @@
         </div>
     </div>
 
+    <div class="popup" id="popup_delete">
+        <div class="popup__container">
+            <button class="popup__close-button" type="button"></button>
+            <form class="form" name="form-delete" novalidate>
+                <h2 class="popup__title">Вы уверены?</h2>
+                <button class="form__save-button form__button" type="submit">Да</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="popup popup_edit-avatar">
+        <div class="popup__container">
+            <button class="popup__close-button" type="button"></button>
+            <h2 class="popup__title">Обновить аватар</h2>
+            <form class="form form_edit-avatar" name="edit-avatar" novalidate>
+                <label class="form__info">
+                    <input name="avatarInput" id="avatar_input" class="form__input form__input_type_avatar" type="url" placeholder="Ссылка на картинку" required>
+                    <span id="avatar_input-error" class="form__input-error"></span>
+                </label>
+                <button class="form__save-button form__save-button_avatar" type="submit">Сохранить</button>
+            </form>
+        </div>
+    </div>
+
     <div class="popup popup_full">
         <div class="popup__container-full">
             <button class="popup__close-button popup__close-full" type="button"></button>
             <figure class="figure">
-                <img class="figure__image" src="#" alt="#">
+                <img class="figure__image" src="#" alt="Полномасштабное изображение">
                 <figcaption class="figure__title"></figcaption>
             </figure>
         </div>
@@ -81,9 +106,10 @@
     <template id="element-template">
         <article class="element">
             <button class="element__delete" type="button"></button>
-            <img class="element__image" src="#" alt="#">
+            <img class="element__image" src="#" alt="Изображение...">
             <h2 class="element__title"></h2>
             <button class="element__like" type="button"></button>
+            <p class="element__like-count"></p>
         </article>
     </template>
 
