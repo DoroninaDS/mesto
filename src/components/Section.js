@@ -1,7 +1,7 @@
 export default class Section {
     constructor({renderer }, cardsConteiner) {
         this._renderer = renderer;
-        this._container = cardsConteiner;
+        this._container = document.querySelector(cardsConteiner);
     }
 
     renderItems(cards) {

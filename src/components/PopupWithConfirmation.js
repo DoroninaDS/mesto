@@ -1,9 +1,9 @@
 import Popup from "./Popup.js";
 
 export default class PopupWithConfirmation extends Popup {
-   constructor(popupSelector) {
-        super(popupSelector);
-        this._confButton = this._elemment.querySelector('.form__save-button');
+   constructor(popup) {
+        super(popup);
+        this._confButton = this._popup.querySelector('.form__save-button');
     }
 
     submCallback (confirm) {

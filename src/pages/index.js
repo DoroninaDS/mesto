@@ -1,6 +1,6 @@
 import './index.css';
 import {formObj, cardObj, popupEdit, popupAdd, popupAvatar, popupDelete, popupFull, popupEditOpenButton,
-popupAddOpenButton, editAvatarButton, nameInput, aboutMeInput, cardsConteiner} from '../utils/constants.js';
+popupAddOpenButton, editAvatarButton, nameInput, aboutMeInput} from '../utils/constants.js';
 import Card from '../components/Card.js';
 import FormValidator from '../components/FormValidator.js';
 import Section from '../components/Section.js';
@@ -76,7 +76,7 @@ const cardList = new Section({
   renderer: (card) => {
     cardList.addItem(createCard(card));
   }
-}, cardsConteiner);
+}, '.elements');
 let userId;
 
 //промисс с изнач. данными
@@ -172,10 +172,10 @@ addPopup.setEventListeners();
 avatarPopup.setEventListeners();
 
 popupEditOpenButton.addEventListener('click', () => {
-  popupEditValidation.resetValidation();
   const data = userInfo.getUserInfo();
   nameInput.value = data.nameUser;
   aboutMeInput.value = data.aboutUser;
+  popupEditValidation.resetValidation();
   userPopup.open();
 });
 
