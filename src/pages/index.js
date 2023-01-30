@@ -18,7 +18,7 @@ const api = new Api({
   }
 });
 
-const confirmPopup = new PopupWithConfirmation(popupDelete);
+const confirmPopup = new PopupWithConfirmation('.popup_delete');
 
 //создане карточки
 function createCard (data) {
@@ -99,13 +99,13 @@ const userInfo = new UserInfo ({
 });
 
 // открытие боьшого изображения
-const fullImage = new PopupWithImage(popupFull);
+const fullImage = new PopupWithImage('.popup_full');
 const handleCardClick = (name, link) => {
   fullImage.open(name, link);
 };
 
 // попап добавления карточки
-const addPopup = new PopupWithForm(popupAdd, 
+const addPopup = new PopupWithForm('.popup_add', 
   {handleSubmit: (data) => {
     addPopup.renderLoading (true);
     api.postCard (data.namedInput, data.linkInput)
@@ -123,7 +123,7 @@ const addPopup = new PopupWithForm(popupAdd,
 }); 
 
 // попап редактирования профиля
-const userPopup = new PopupWithForm(popupEdit, 
+const userPopup = new PopupWithForm('.popup_edit', 
   {handleSubmit: (data) => {
     userPopup.renderLoading (true);
     api.editUserInfo (data.nameInput, data.aboutMeInput)
@@ -141,7 +141,7 @@ const userPopup = new PopupWithForm(popupEdit,
 });
 
 // попап редактирования аватара
-const avatarPopup = new PopupWithForm(popupAvatar, 
+const avatarPopup = new PopupWithForm('.popup_edit-avatar', 
   {handleSubmit: (data) => {
     avatarPopup.renderLoading (true);
     api.changeAvatar (data.avatarInput)
