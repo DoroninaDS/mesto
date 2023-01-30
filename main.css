@@ -29,9 +29,9 @@
 .popup__title{font-size:24px;font-style:normal;font-weight:900;line-height:1.2;margin:0 0 38px;padding:0}@media screen and (max-width:770px){.popup__title{font-size:18px;line-height:1.22;margin-bottom:75px}}
 .popup__container-full{position:relative}
 .popup_full{background-color:rgba(0,0,0,.9)}
-.figure{display:flex;flex-direction:column;margin:0;padding:0;text-align:left}
-.figure__image{margin:0 0 10px;max-height:75vh;max-width:75vw}
-.figure__title{color:#fff;font-size:12px;font-style:normal;font-weight:400;line-height:1.25}
+.popup__figure{display:flex;flex-direction:column;margin:0;padding:0;text-align:left}
+.popup__figure_image{margin:0 0 10px;max-height:75vh;max-width:75vw}
+.popup__figure_title{color:#fff;font-size:12px;font-style:normal;font-weight:400;line-height:1.25}
 
 .form__info{border:none;display:flex;flex-direction:column;margin:0;padding:0;position:relative}
 .form__input{border:none;border-bottom:1px solid #ccc;box-sizing:border-box;color:#000;font-family:inherit;font-size:14px;font-style:normal;font-weight:400;line-height:1.2;margin-bottom:35px;padding:6px;width:358px}.form__input:focus{border-bottom:1px solid #ccc;outline:none}@media screen and (max-width:770px){.form__input{width:238px}}
